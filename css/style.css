@@ -1,0 +1,280 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "HelveticaNeueCyr-Roman";
+  src: url("../fonts/HelveticaNeueCyr-Roman.otf") format("otf");
+  font-weight: 400;
+  font-display: swap; }
+
+@font-face {
+  font-family: "HelveticaNeueCyr-Medium";
+  src: url("../fonts/HelveticaNeueCyr-Medium.otf") format("otf");
+  font-weight: 500;
+  font-display: swap; }
+
+html {
+  box-sizing: border-box; }
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit; }
+
+html,
+body {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  font-family: "HelveticaNeueCyr-Roman", sans-serif;
+  font-weight: 400;
+  line-height: 1.4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #333333; }
+
+body {
+  width: 100%; }
+
+.container {
+  max-width: 1170px;
+  padding: 0 15px;
+  margin: 0 auto; }
+
+.calc {
+  width: 100%;
+  padding-bottom: 200px; }
+  .calc__title {
+    font-weight: 500;
+    font-size: 26px; }
+  .calc__form {
+    margin-top: 40px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between; }
+  .calc__inner {
+    max-width: 600px;
+    width: 100%; }
+  .calc__desc {
+    display: inline-block;
+    font-size: 18px;
+    color: #bfc0c0;
+    margin-bottom: 5px; }
+    .calc__desc--dark {
+      color: #333333;
+      display: block;
+      text-align: center;
+      margin-bottom: 0;
+      max-width: 390px; }
+  .calc__options {
+    max-width: 350px;
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 40px;
+    border: 1px solid #ebebeb;
+    cursor: pointer;
+    position: relative; }
+    .calc__options::after {
+      content: "";
+      position: absolute;
+      top: 20px;
+      right: 15px;
+      width: 11px;
+      height: 7px;
+      background-image: url(../icons/arrow-down.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center; }
+    .calc__options-list {
+      position: absolute;
+      top: 30px;
+      left: -1px;
+      z-index: 10;
+      width: calc(100% + 2px);
+      background-color: white;
+      list-style: none;
+      padding: 0 15px;
+      border: 1px solid #ebebeb;
+      border-top: none;
+      display: none; }
+    .calc__options.open::after {
+      transform: rotate(-180deg); }
+    .calc__options.open .calc__options-list {
+      display: block; }
+  .calc__option {
+    cursor: pointer;
+    padding: 10px 0;
+    transition: all 0.3s; }
+    .calc__option:hover {
+      color: #f99f1b; }
+  .calc__price {
+    font-size: 36px;
+    margin-bottom: 25px; }
+    .calc__price--main {
+      margin-bottom: 40px; }
+    .calc__price span {
+      margin-right: 10px; }
+  .calc__slider {
+    margin-bottom: 80px; }
+    .calc__slider.noUi-horizontal {
+      height: 4px;
+      border: none;
+      box-shadow: none;
+      background-color: #e9e9e9; }
+    .calc__slider .noUi-pips-horizontal {
+      padding: 0;
+      height: 30px; }
+    .calc__slider .noUi-connect {
+      background: #f99f1b; }
+    .calc__slider .noUi-handle {
+      border: 5px solid #f99f1b;
+      background-color: #ffffff;
+      height: 24px;
+      width: 24px;
+      border-radius: 100%;
+      box-shadow: 0px 2px 4px 0px rgba(249, 159, 27, 0.5);
+      top: -10px;
+      cursor: pointer; }
+      .calc__slider .noUi-handle::after, .calc__slider .noUi-handle::before {
+        display: none; }
+    .calc__slider .noUi-marker-horizontal.noUi-marker-large {
+      display: none; }
+  .calc__subtitle {
+    font-size: 36px;
+    margin-bottom: 20px; }
+  .calc__final {
+    max-width: 490px;
+    width: 100%;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+    background-color: #ffffff;
+    padding: 50px 20px 50px 50px;
+    margin-left: 35px;
+    position: relative; }
+  .calc__pricePerMounth {
+    max-width: 390px;
+    width: 100%;
+    font-size: 56px;
+    text-align: center;
+    color: #0077b2;
+    padding-bottom: 55px;
+    margin: 0 0 60px;
+    border-bottom: 1px solid #e9e9e9; }
+    .calc__pricePerMounth span {
+      margin-right: 15px; }
+  .calc__item {
+    display: inline-block;
+    width: calc(50% - 10px); }
+    .calc__item:nth-child(2n) {
+      margin-left: 10px; }
+  .calc__btn {
+    padding: 15px 15px 12px;
+    background-color: #0077b2;
+    color: white;
+    font-size: 18px;
+    border: 1px solid #0077b2;
+    box-shadow: none;
+    max-width: 250px;
+    width: 100%;
+    position: absolute;
+    right: 0;
+    bottom: -100px;
+    text-align: left;
+    cursor: pointer;
+    transition: all 0.3s; }
+    .calc__btn svg {
+      position: absolute;
+      right: 15px;
+      top: 20px; }
+    .calc__btn svg path {
+      transition: all 0.3s; }
+    .calc__btn:hover {
+      background-color: #fff;
+      color: #0077b2; }
+      .calc__btn:hover svg path {
+        fill: #0077b2; }
+
+#percent .noUi-value:nth-child(2) {
+  left: 10px !important; }
+  #percent .noUi-value:nth-child(2)::after {
+    content: "%";
+    position: absolute;
+    right: -17px; }
+
+#percent .noUi-value:nth-child(4) {
+  left: calc(100% - 25px) !important; }
+  #percent .noUi-value:nth-child(4)::after {
+    content: "%";
+    position: absolute;
+    right: -17px; }
+
+#date .noUi-value:nth-child(2) {
+  left: 10px !important; }
+  #date .noUi-value:nth-child(2)::after {
+    content: "месяцев";
+    position: absolute;
+    right: -70px; }
+
+#date .noUi-value:nth-child(4) {
+  left: calc(100% - 80px) !important; }
+  #date .noUi-value:nth-child(4)::after {
+    content: "месяцев";
+    position: absolute;
+    right: -70px; }
+
+@media (max-width: 768px) {
+  body {
+    width: auto;
+    height: auto; }
+  .calc__title {
+    font-size: 24px; }
+  .calc__form {
+    margin-top: 25px;
+    flex-direction: column; }
+  .calc__inner {
+    max-width: calc(100% - 10px); }
+  .calc__desc {
+    font-size: 16px;
+    margin-bottom: 0px; }
+    .calc__desc--dark {
+      max-width: 100%; }
+  .calc__price {
+    font-size: 24px;
+    margin-bottom: 15px; }
+    .calc__price--main {
+      margin-bottom: 25px; }
+    .calc__price span {
+      margin-right: 5px; }
+  .calc__slider {
+    margin-bottom: 50px; }
+    .calc__slider .noUi-handle {
+      height: 20px;
+      width: 20px;
+      top: -8px; }
+  .calc__subtitle {
+    font-size: 24px; }
+  .calc__final {
+    margin-top: 40px;
+    max-width: 100%;
+    margin-left: 0;
+    padding: 40px 24px; }
+  .calc__pricePerMounth {
+    max-width: 100%;
+    font-size: 36px;
+    padding-bottom: 25px;
+    margin: 0 0 25px; }
+    .calc__pricePerMounth span {
+      margin-right: 10px; }
+  .calc__item {
+    width: 48%; }
+  .calc__btn {
+    font-size: 16px;
+    max-width: 100%;
+    text-align: center; }
+    .calc__btn::after {
+      top: 18px; } }
+
+@media (max-width: 500px) {
+  .calc__item {
+    width: 100%; }
+    .calc__item:nth-child(2n) {
+      margin-left: 0; } }

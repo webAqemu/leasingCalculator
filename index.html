@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>calculating</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/nouislider.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <section class="calc">
+      <div class="container">
+        <h1 class="calc__title">Лизинговый калькулятор</h1>
+        <form class="calc__form">
+          <div class="calc__inner">
+            <span class="calc__desc">Модель ГАЗ</span>
+            <div class="calc__options">
+              <span class="calc__option calc__option--choosed" data-price="3580000">ГАЗон Next</span>
+              <ul class="calc__options-list">
+                <li class="calc__option" data-price="3580000">ГАЗон Next</li>
+                <li class="calc__option" data-price="4580000">Вариант 2</li>
+                <li class="calc__option" data-price="5580000">Вариант 3</li>
+              </ul>
+            </div>
+            <div class="calc__desc">Стоимость техники</div>
+            <div class="calc__price calc__price--main"><span>3580000</span>&#8381;</div>
+            <div class="calc__desc">Аванс</div>
+            <div class="calc__price calc__price--percent"><span>65</span>%</div>
+            <div class="calc__slider" id="percent"></div>
+            <div class="calc__subtitle">Срок лизинга</div>
+            <div class="calc__slider" id="date"></div>
+          </div>
+          <div class="calc__final">
+            <div class="calc__desc calc__desc--dark">Ежемесячный платеж</div>
+            <div class="calc__pricePerMounth"><span>32 850</span>&#8381;</div>
+            <div class="calc__item">
+              <div class="calc__desc">Сумма по договору</div>
+              <div class="calc__price" id="finalSum"><span>4 289 000</span>&#8381;</div>
+            </div>
+            <div class="calc__item">
+              <div class="calc__desc">Ставка</div>
+              <div class="calc__price" id="finalPercent"><span>26</span>%</div>
+            </div>
+            <div class="calc__item">
+              <div class="calc__desc">Налоговая экономия</div>
+              <div class="calc__price" id="finalDue"><span>460 670</span>&#8381;</div>
+            </div>
+            <div class="calc__item">
+              <div class="calc__desc">Годовое удорожание</div>
+              <div class="calc__price" id="finalYearUp"><span>9,72</span>%</div>
+            </div>
+            <button class="calc__btn" type="submit">
+              Отправить заявку
+              <svg width="7" height="11" viewBox="0 0 7 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.18114 0L0 1.18118L3.8273 5.00847L0 8.83577L1.18114 10.0169L6.18961 5.00847L1.18114 0Z" fill="white" />
+              </svg>
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+    <script src="./js/nouislider.min.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
