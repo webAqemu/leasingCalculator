@@ -236,7 +236,8 @@ body {
     font-size: 16px;
     margin-bottom: 0px; }
     .calc__desc--dark {
-      max-width: 100%; }
+      max-width: 100%;
+      margin-bottom: 10px; }
   .calc__price {
     font-size: 24px;
     margin-bottom: 15px; }
@@ -256,12 +257,12 @@ body {
     margin-top: 40px;
     max-width: 100%;
     margin-left: 0;
-    padding: 40px 24px; }
+    padding: 40px 24px 0; }
   .calc__pricePerMounth {
     max-width: 100%;
     font-size: 36px;
-    padding-bottom: 25px;
-    margin: 0 0 25px; }
+    padding-bottom: 20px;
+    margin: 0 0 20px; }
     .calc__pricePerMounth span {
       margin-right: 10px; }
   .calc__item {
@@ -269,7 +270,8 @@ body {
   .calc__btn {
     font-size: 16px;
     max-width: 100%;
-    text-align: center; }
+    text-align: center;
+    bottom: -70px; }
     .calc__btn::after {
       top: 18px; } }
 
