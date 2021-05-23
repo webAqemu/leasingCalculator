@@ -111,8 +111,18 @@ body {
     margin-bottom: 25px; }
     .calc__price--main {
       margin-bottom: 40px; }
-    .calc__price span {
-      margin-right: 10px; }
+    .calc__price input {
+      border: none;
+      box-shadow: none;
+      background-color: #ffffff;
+      width: 40px;
+      display: inline-block;
+      margin-right: 5px;
+      padding: 0;
+      outline: none;
+      font-size: 36px;
+      font-family: "HelveticaNeueCyr-Roman", sans-serif;
+      font-weight: 400; }
   .calc__slider {
     margin-bottom: 80px; }
     .calc__slider.noUi-horizontal {
@@ -167,7 +177,7 @@ body {
     .calc__item:nth-child(2n) {
       margin-left: 10px; }
   .calc__btn {
-    padding: 15px 15px 12px;
+    padding: 13px 15px 14px;
     background-color: #0077b2;
     color: white;
     font-size: 18px;
@@ -184,7 +194,7 @@ body {
     .calc__btn svg {
       position: absolute;
       right: 15px;
-      top: 20px; }
+      top: 19px; }
     .calc__btn svg path {
       transition: all 0.3s; }
     .calc__btn:hover {
@@ -222,28 +232,31 @@ body {
     right: -70px; }
 
 @media (max-width: 768px) {
-  body {
-    width: auto;
-    height: auto; }
   .calc__title {
     font-size: 24px; }
   .calc__form {
     margin-top: 25px;
     flex-direction: column; }
   .calc__inner {
-    max-width: calc(100% - 10px); }
+    max-width: 100%; }
   .calc__desc {
     font-size: 16px;
     margin-bottom: 0px; }
     .calc__desc--dark {
       max-width: 100%;
       margin-bottom: 10px; }
+    .calc__desc--model {
+      margin-bottom: 10px; }
+  .calc__options {
+    max-width: 100%; }
   .calc__price {
     font-size: 24px;
     margin-bottom: 15px; }
     .calc__price--main {
       margin-bottom: 25px; }
-    .calc__price span {
+    .calc__price input {
+      font-size: 24px;
+      width: 30px;
       margin-right: 5px; }
   .calc__slider {
     margin-bottom: 50px; }
@@ -257,7 +270,7 @@ body {
     margin-top: 40px;
     max-width: 100%;
     margin-left: 0;
-    padding: 40px 24px 0; }
+    padding: 40px 24px 20px; }
   .calc__pricePerMounth {
     max-width: 100%;
     font-size: 36px;
@@ -271,9 +284,18 @@ body {
     font-size: 16px;
     max-width: 100%;
     text-align: center;
-    bottom: -70px; }
-    .calc__btn::after {
-      top: 18px; } }
+    bottom: -70px;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .calc__btn svg {
+      position: relative;
+      top: auto;
+      right: auto;
+      margin: 2px 0 0 20px; }
+  #percent,
+  #date {
+    max-width: calc(100% - 10px); } }
 
 @media (max-width: 500px) {
   .calc__item {
