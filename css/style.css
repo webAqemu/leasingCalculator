@@ -50,7 +50,8 @@ body {
     margin-top: 40px;
     display: flex;
     align-items: flex-start;
-    justify-content: space-between; }
+    justify-content: space-between;
+    position: relative; }
   .calc__inner {
     max-width: 600px;
     width: 100%; }
@@ -123,6 +124,8 @@ body {
       font-size: 36px;
       font-family: "HelveticaNeueCyr-Roman", sans-serif;
       font-weight: 400; }
+    .calc__price span {
+      margin-right: 5px; }
   .calc__slider {
     margin-bottom: 80px; }
     .calc__slider.noUi-horizontal {
@@ -157,9 +160,8 @@ body {
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
     border-radius: 20px;
     background-color: #ffffff;
-    padding: 50px 20px 50px 50px;
-    margin-left: 35px;
-    position: relative; }
+    padding: 80px 20px 50px 50px;
+    margin-left: 35px; }
   .calc__pricePerMounth {
     max-width: 390px;
     width: 100%;
@@ -187,7 +189,7 @@ body {
     width: 100%;
     position: absolute;
     right: 0;
-    bottom: -100px;
+    bottom: -50px;
     text-align: left;
     cursor: pointer;
     transition: all 0.3s; }
@@ -202,6 +204,10 @@ body {
       color: #0077b2; }
       .calc__btn:hover svg path {
         fill: #0077b2; }
+  .calc__logo {
+    position: absolute;
+    left: 0;
+    bottom: -50px; }
 
 #percent .noUi-value:nth-child(2) {
   left: 10px !important; }
@@ -293,6 +299,8 @@ body {
       top: auto;
       right: auto;
       margin: 2px 0 0 20px; }
+  .calc__logo {
+    display: none; }
   #percent,
   #date {
     max-width: calc(100% - 10px); } }

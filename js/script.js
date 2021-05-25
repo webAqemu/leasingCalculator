@@ -48,10 +48,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const fullPrice = +document.querySelector(".calc__price--main span").innerHTML.split(" ").join("");
     //console.log(fullPrice);
     const prePayment = +document.querySelector(".calc__price--percent input").value / 100;
-    console.log(prePayment);
+    //console.log(prePayment);
     const time = +document.querySelector(".calc__price--date input").value;
     //console.log(time);
-    const percents = +document.querySelector("#finalPercent span").innerHTML / 100;
+    const percents = 17 / 100;
     //console.log(percents);
     const C = fullPrice - fullPrice * prePayment;
     //console.log(C);
